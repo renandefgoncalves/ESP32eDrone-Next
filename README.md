@@ -289,4 +289,15 @@ names: # Defina aqui as labels do seu dataset
 ```
 copie o arquivo ```telhado.yaml``` para dentro da pasta** reconhecedor-obj que está no Google Drive ```/content/drive/MyDrive/reconhecedor-obj/teclado.yaml```
 
-! cp /content/drive/MyDrive/FIAP/FIAP_NEXT/TESTE/telhado.yaml yolov5/data/
+
+> **Insere o arquivo .yaml para treinamento** Este é o primeiro passo para começar o treinamento
+```
+! cp /content/drive/MyDrive/reconhecedor-obj/teclado.yaml yolov5/data/
+```
+
+> **Treinamento em si** Você pode mexer na variável --epochs mudando o número na frente dele. Exemplo, você pode subir o 40 para 60 e analisar os resultados de acurácia do seu modelo.
+```
+! python yolov5/train.py --data telhado.yaml --weights yolov5s.pt --img 640 --epochs 40
+```
+
+
