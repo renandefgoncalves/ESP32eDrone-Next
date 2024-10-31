@@ -1,6 +1,8 @@
 <div align="center">
-  
-# Projeto SALVA ⛑️
+
+<img src="https://github.com/user-attachments/assets/18cf580f-5a08-40a0-8cb3-e113e3c687a5" width="20%"/>
+
+# ⛑️ Projeto SALVA ⛑️
 Sistema de Auxílio e Localização de Vítimas em Áreas Alagadas
 </div>
 </br>
