@@ -269,6 +269,9 @@ else:
 
 7.4) Acesse novamente Arquivos -> Preferências, clique em URL do Gerenciador de Placas Adicionais e insira o link: https://dl.espressif.com/dl/package_esp32_index.json, dê ok.
 
+[![](https://markdown-videos-api.jorgenkh.no/youtube/poVgoe4Pon8)](https://youtu.be/poVgoe4Pon8)
+
+
 7.5) Abra o Gerenciador de Placas. Clique no segundo item do canto esquerdo, que fica entre o símbolo da pasta e dos livros, clique em "filtrar sua pesquisa..." e escreva *esp32*
 
 7.6) Instale esp32 por "Espressif System"
