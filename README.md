@@ -76,13 +76,6 @@ C++
 
 <br>
 
-
-
-
-
-
-
-
 ## Passo 02: Organizando seu projeto
 Por praticidade e organização, hospedaremos nossos arquivos no Google Drive, isso permite que os arquivos sejam acessados de qualquer lugar e ainda teremos uma acessibilidade melhor para manipular os arquivos no Google Collab 
 
@@ -253,8 +246,18 @@ else:
 
 <br></br>
 
-## Passo 07: Programação (Softwares) Video Passo a Passo (https:youtube...)
-7.1) Efetue o download do Software | Arduino IDE https://www.arduino.cc/en/software e do software | Visual Studio Code https://code.visualstudio.com/. *No lugar do Visual Studio Code, pode ser usada a IDE de sua preferência, compatível com Python.*
+## Passo 07: Programação (Softwares)
+7.1) Efetue o download dos seguintes Softwares:
+
+- Arduino IDE https://www.arduino.cc/en/software <br>
+[![](https://markdown-videos-api.jorgenkh.no/youtube/_s8Dx61ECJA)](https://youtu.be/_s8Dx61ECJA)
+
+
+- Visual Studio Code https://code.visualstudio.com/ <br>
+[![](https://markdown-videos-api.jorgenkh.no/youtube/1s_cB4q-ZKI)](https://youtu.be/1s_cB4q-ZKI)
+
+
+**No lugar do Visual Studio Code, pode ser usada a IDE de sua preferência, compatível com Python.**
 
 7.2) Efetue a instalação de ambos softwares
 
