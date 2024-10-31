@@ -355,5 +355,44 @@ const char* WIFI_PASS = "password"; Troque a senha "password" pela que configuro
 
 *** terminar
 
+## Passo 08: Rodando o Modelo no Visual Code
+7.1) Abra um Visual Code;
 
+7.2) Crie um arquivo Python, cole esse código e salve-o na mesma pasta em que está o .ino e o best.pt:
+
+``` python
+import cv2
+import torch
+import numpy as np
+import urllib
+import pathlib
+from pathlib import Path
+
+pathlib.PosixPath = pathlib.WindowsPath
+
+path = 'best.pt' # TROQUE PELO CAMINHO DO SEU PESO CASO QUEIRA (best.pt que foi gerado no treinamento) ex: yolov5/runs/train/exp9/weights/best.pt
+image_url = 'http://192.168.10.250/cam-hi.jpg' # TROQUE PELO LINK GERADO NO MONITOR SERIAL
+
+model = torch.hub.load('ultralytics/yolov5', 'custom', path, force_reload=True)
+model.conf = 0.6 #essa variável determina a acurácia do seu modelo. Faça testes para encontrar o melhor resultado.
+
+print(path)
+
+while True:
+    img_resp=urllib.request.urlopen(url=image_url)
+    imgnp=np.array(bytearray(img_resp.read()),dtype=np.uint8)
+    im = cv2.imdecode(imgnp,-1)
+    results = model(im)
+    print(results)
+    frame = np.squeeze(results.render())
+    cv2.imshow('Deteccao', frame)
+    key=cv2.waitKey(5)
+    if key==ord('q'):
+        break
+
+cv2.destroyAllWindows()
+```
+7.3) Só lembrando que o seu arquivo best.pt fica num path parecido como esse: yolov5/runs/train/exp9/weights/best.pt do seu Google Drive. Esse exp9 é o número de vezes que você treinou. Portanto, ele vai incrementar a cada treinamento.
+
+7.4) Dê o play no seu Visual Studio e uma tela pop-up do Python vai se abrir com imagens capturadas da sua câmera do ESP32-CAM.
 
