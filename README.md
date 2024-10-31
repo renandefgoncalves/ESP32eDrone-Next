@@ -7,15 +7,20 @@ Sistema de Auxílio e Localização de Vítimas em Áreas Alagadas
 </div>
 </br>
 
-## Descrição do Projeto: Detector de Objetos Usando ESP32 e Yolov5
+## Descrição do Projeto: Detector de Pessoas e Objetos usando ESP32 e Yolov5 operado por Drone
 Esse projeto visa Identificar pessoas em situação de risco e/ou pedindo ajuda em cima de telhados ou locais de difícil acesso em regiões alagadas, com base nos desastres ocorridos pelas enchentes no Rio Grande do Sul.
 
 - O ESP32 é um microcontrolador desenvolvido pela Espressif Systems, conhecido por sua versatilidade e recursos avançados. Ele combina um processador dual-core com conectividade Wi-Fi e Bluetooth, tornando-o ideal para aplicações em Internet das Coisas (IoT).</br></br>
-- O YOLOv5 é um modelo de detecção de objetos que faz parte da série de modelos YOLO (You Only Look Once). Ele é projetado para identificar e localizar objetos em imagens e vídeos em tempo real. A principal característica do YOLOv5 é sua capacidade de combinar alta precisão com velocidade, tornando-o ideal para aplicações que exigem resposta rápida, como vigilância, robótica e veículos autônomos.
+- O YOLOv5 é um modelo de detecção de objetos que faz parte da série de modelos YOLO (You Only Look Once). Ele é projetado para identificar e localizar objetos em imagens e vídeos em tempo real. A principal característica do YOLOv5 é sua capacidade de combinar alta precisão com velocidade, tornando-o ideal para aplicações que exigem resposta rápida, como vigilância, robótica e veículos autônomos.</br></br>
+- O Drone não será abordado nesse passo a passo, devido diversidade de modelos e conexões existentes.
 
-### Linguagem utilizada
-- Python
-- C++
+### Linguagens utilizadas
+```python
+Python
+```
+``` c++
+C++
+```
 <br></br>
 
 ## Passo 01: Periféricos (Possuir os seguintes equipamentos)
@@ -26,10 +31,57 @@ Esse projeto visa Identificar pessoas em situação de risco e/ou pedindo ajuda 
 - 4 cabos conectores com saídas fêmea Dupont em ambas extremidades e 1 jumper (ou acrescente um cabo conector, para ser utilizado como jumper)
 
 *Em posse dos itens acima, efetuar as conexões:*<br> O local apontado pela seta vermelha indica o jumper, que pode ser feito com 1 cabo conector com as saídas fêmeas dupont, ligados em U.
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/a855df23-4f20-4def-83d9-3a9f259e4fd4" width="50%" />
-</p>
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/a855df23-4f20-4def-83d9-3a9f259e4fd4" width="30%" /> <br><br>
+
+  <table>
+    <tr>
+      <th>Pinos do ESP32-CAM</th>
+      <th>Pinos Placa FTDI</th>
+      <th>Descrição</th>
+      <th>Cores</th>
+    </tr>
+    <tr>
+      <td>5V</td>
+      <td>VCC</td>
+      <td>Alimentação Positiva</td>
+      <td>Vermelho</td>
+    </tr>
+    <tr>
+      <td>GND</td>
+      <td>GND</td>
+      <td>Alimentação Negativa</td>
+      <td>Preto</td>
+    </tr>
+    <tr>
+      <td>UOT</td>
+      <td>RX</td>
+      <td>Pinos de Comunicação cruzados. TX ligado no RX</td>
+      <td>Azul</td>
+    </tr>
+    <tr>
+      <td>UOR</td>
+      <td>TX</td>
+      <td>Pinos de Comunicação cruzados. RX ligado no TX</td>
+      <td>Verde</td>
+    </tr>
+    <tr>
+      <td>IO0 com GND</td>
+      <td>--------</td>
+      <td>Habilita o modo programação</td>
+      <td>Cinza</td>
+    </tr>
+  </table>
+</div>
+
 <br>
+
+
+
+
+
+
+
 
 ## Passo 02: Organizando seu projeto
 Por praticidade e organização, hospedaremos nossos arquivos no Google Drive, isso permite que os arquivos sejam acessados de qualquer lugar e ainda teremos uma acessibilidade melhor para manipular os arquivos no Google Collab 
