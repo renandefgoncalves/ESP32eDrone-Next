@@ -18,7 +18,8 @@ Esse projeto visa Identificar pessoas em situação de risco e/ou pedindo ajuda 
 ```python
 Python
 ```
-``` c++
+
+``` c#
 C++
 ```
 <br></br>
@@ -32,7 +33,7 @@ C++
 
 *Em posse dos itens acima, efetuar as conexões:*<br> O local apontado pela seta vermelha indica o jumper, que pode ser feito com 1 cabo conector com as saídas fêmeas dupont, ligados em U.
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/a855df23-4f20-4def-83d9-3a9f259e4fd4" width="30%" /> <br><br>
+  <img src="https://github.com/renandefgoncalves/Reconhecedor-de-Objetos/blob/main/img/Ligacao-FTDI.png" width="70%" /> <br><br>
 
   <table>
     <tr>
@@ -154,7 +155,7 @@ https://blog.totalcad.com.br/wp-content/uploads/2017/06/m-d987916938a7aebcac0fcd
 ```/content/drive/MyDrive/reconhecedor-obj```
 <br></br>
 
-## Passo 06: Criando o código no Google Collab | Video Passo a Passo (https:youtube...)
+## Passo 06: Criando o código no Google Collab
 6.1) Acesse o site do Google Collab | https://colab.research.google.com/ **Certifique-se de estar logado com a mesma conta que fez o upload dos arquivos no Google Drive**
 
 6.2) Clique em arquivo -> Novo Notebook no Drive
@@ -261,17 +262,29 @@ else:
 
 7.2) Efetue a instalação de ambos softwares
 
-7.3) Com o Arduino aberto, se preferir, troque a linguagem para português-BR, acessando File -> Preferences -> Language e trocando English por português-BRASIL, clique em OK e reinicie o Arduino IDE para que altera o idioma.
+7.3) Com o Arduino aberto, se preferir, troque a linguagem para português-BR, acessando File -> Preferences -> Language e trocando English por português-BRASIL, clique em OK e reinicie o Arduino IDE para que altera o idioma. 
+
+[![](https://markdown-videos-api.jorgenkh.no/youtube/Im_17-sjf0w)](https://youtu.be/Im_17-sjf0w)
+
 
 7.4) Acesse novamente Arquivos -> Preferências, clique em URL do Gerenciador de Placas Adicionais e insira o link: https://dl.espressif.com/dl/package_esp32_index.json, dê ok.
 
-7.5) Abra o Gerenciador de Placas. Clique no segundo item do canto esquerdo, que fica entre o símbolo da pasta e dos livros.
+7.5) Abra o Gerenciador de Placas. Clique no segundo item do canto esquerdo, que fica entre o símbolo da pasta e dos livros, clique em "filtrar sua pesquisa..." e escreva *esp32*
 
-7.6) Após abrir o gerenciador de placas, clique em "filtrar sua pesquisa..." e escreva *esp32*
+7.6) Instale esp32 por "Espressif System"
 
-7.7) Instale esp32 por espressif (Esse passo pode demorar bastante dependendo da sua conexão e do seu computador)
+7.7) Faça o download das bibliotecas 
+- [ESP Async WebServer](https://github.com/renandefgoncalves/Reconhecedor-de-Objetos/blob/main/Bibliotecas/ESPAsyncWebServer-master.zip)
+- [ESP32CAM Main](https://github.com/renandefgoncalves/Reconhecedor-de-Objetos/blob/main/Bibliotecas/esp32cam-main.zip)
+- [ESP32 SDK Master](https://github.com/renandefgoncalves/Reconhecedor-de-Objetos/blob/main/Bibliotecas/esp8266-esp32-sdk-master.zip)
 
-7.8) Clique no retângulo -> Selecione outra placa e porta -> busque por "AI Thinker ESP32-CAM"
+[![](https://markdown-videos-api.jorgenkh.no/youtube/df5JZYzU0JU)](https://youtu.be/df5JZYzU0JU)
+
+
+clique em Rascunho -> Incluir Biblioteca -> Adicionar Biblioteca.ZIP... , e selecione as 3 bibliotecas que fez o download uma de cada vez, repetindo o processo.
+
+7.8) Clique no retângulo -> Selecione outra placa e porta -> busque por "AI Thinker ESP32-CAM" 
+[![](https://markdown-videos-api.jorgenkh.no/youtube/_gqzeojdfGuw)](https://youtu.be/gqzeojdfGuw)
 
 7.9) Se aparecer 'nenhuma porta conectada', conecte o USB ao computador e verifique a porta que será habilitada. (Caso não habilite nenhuma porta, tente outro cabo usb), caso apareça mais de uma porta, remova o cabo e verifique o número da porta que será removido, reinsira o cabo e selecione novamente a porta que será habilitada.
 
@@ -398,6 +411,9 @@ void loop()
 }
 ```
 7.11) Após colar este código, altere nas linhas 5 e 6 sua rede wi-fi e senha pelas que você utilizará (Essa rede deve ser 2.4 GHz, não é possível conexão com redes 5 GHz. **Não funciona em iPhones, pois não possuem rede 2.4 GHz**
+
+[![](https://markdown-videos-api.jorgenkh.no/youtube/5Tq-6lDQ9BQ)](https://youtu.be/5Tq-6lDQ9BQ)
+
   
 ``` c++ 
 const char* WIFI_SSID = "ssid wifi celular"; Troque o "ssid wifi celular" pelo nome certo da sua rede
